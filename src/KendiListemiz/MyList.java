@@ -1,3 +1,5 @@
+package KendiListemiz;
+
 public class MyList<T> {
     private int capacity;
 

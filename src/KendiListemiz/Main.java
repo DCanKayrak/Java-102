@@ -1,3 +1,5 @@
+package KendiListemiz;
+
 public class Main {
     public static void main(String[] args) {
         MyList<Integer> liste = new MyList<>();
