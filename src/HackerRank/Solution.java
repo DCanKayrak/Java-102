@@ -5,29 +5,34 @@ import java.util.*;
 
 public class Solution {
 
-    public static void main(String[] args) {
-        Scanner gir = new Scanner(System.in);
-        System.out.println(MyCalculator.power(gir.nextInt(),gir.nextInt()));
-        System.out.println(MyCalculator.power(gir.nextInt(),gir.nextInt()));
-        System.out.println(MyCalculator.power(gir.nextInt(),gir.nextInt()));
-        System.out.println(MyCalculator.power(gir.nextInt(),gir.nextInt()));
-        System.out.println(MyCalculator.power(gir.nextInt(),gir.nextInt()));
+        public static void main(String[] args) {
+            /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+            Scanner scan=new Scanner(System.in);
+            while (scan.hasNext()) {
 
-    }
-}
-class MyCalculator {
 
-    public static String power(int p,int n){
-        double result;
-        try{
-            if(n<0 || p<0)
-                throw new Exception("java.lang.Exception: n or p should not be negative.");
-            else if(n==0&&p==0)
-                throw new Exception("java.lang.Exception: n and p should not be zero.");
-            else
-                return ""+(long)Math.pow(p,n);
-        }catch (Exception e){
-            return e.getMessage();
+                try {
+                    double x = scan.nextInt();
+                    double y =scan.nextInt();
+                    if(y==0.0&&x==0.0) {
+                        System.out.println("java.lang.Exception: n and p should not be zero.");
+                    }
+                    else if(y<0||x<0){
+                        System.out.println("java.lang.Exception: n or p should not be negative.");
+                    }
+                    else {
+
+                        double z =Math.pow(x, y);
+                        int k = (int) z;
+                        System.out.println(k);
+                    }
+
+
+
+
+                }catch (Exception e) {
+                    System.out.println("java.util.InputMismatchException");
+                }
+            }
         }
-    }
 }
