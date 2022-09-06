@@ -2,12 +2,7 @@ package PatikaOdev.KitapSirala;
 import java.util.*;
 public class Test {
     public static void main(String[] args) {
-        Set<Book> kitaplarOrderedByName = new TreeSet<>(new Comparator<Book>() {
-            @Override
-            public int compare(Book o1, Book o2) {
-                return o1.getName().compareToIgnoreCase(o2.getName());
-            }
-        });
+        Set<Book> kitaplarOrderedByName = new TreeSet<>();
         Set<Book> kitaplarOrderedByPage = new TreeSet<>(new Comparator<Book>() {
             @Override
             public int compare(Book o1, Book o2) {

@@ -1,6 +1,6 @@
 package PatikaOdev.KitapSirala;
 
-public class Book{
+public class Book implements Comparable<Book>{
     private String name;
     private int pageNum;
 
@@ -23,5 +23,10 @@ public class Book{
 
     public void setPageNum(int pageNum) {
         this.pageNum = pageNum;
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        return getName().compareToIgnoreCase(o.getName());
     }
 }
