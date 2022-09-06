@@ -1,4 +1,4 @@
-package KendiListemiz;
+package PatikaOdev.KendiListemiz;
 
 public class Main {
     public static void main(String[] args) {

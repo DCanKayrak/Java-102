@@ -1,4 +1,4 @@
-package KendiListemiz;
+package PatikaOdev.KendiListemiz;
 
 public class MyList<T> {
     private int capacity;
