@@ -1,5 +1,7 @@
 package PatikaOdev.PatikaStore;
 
+import java.util.Comparator;
+
 public class Product implements Comparable<Product> {
     private int id;
     private double priceForUnit;
@@ -67,6 +69,6 @@ public class Product implements Comparable<Product> {
 
     @Override
     public int compareTo(Product o) {
-        return this.getId()-o.getId();
+        return getName().compareToIgnoreCase(o.getName());
     }
 }
