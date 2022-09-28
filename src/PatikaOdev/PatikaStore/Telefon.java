@@ -7,7 +7,7 @@ public class Telefon extends Product{
     private int ram;
     private java.lang.String color;
 
-
+    private Brand marka;
     public Telefon(int id, double priceForUnit, double discountRate, int stokAmount, java.lang.String name, Brand marka, int ram, double screenSize, int storage, int battery, java.lang.String color) {
         super(id, priceForUnit, discountRate, stokAmount, name, marka);
         this.ram = ram;
@@ -15,6 +15,7 @@ public class Telefon extends Product{
         this.storage = storage;
         this.color = color;
         this.battery = battery;
+        this.marka = marka;
     }
 
     public int getStorage() {
@@ -55,5 +56,15 @@ public class Telefon extends Product{
 
     public void setColor(java.lang.String color) {
         this.color = color;
+    }
+
+    @Override
+    public Brand getMarka() {
+        return marka;
+    }
+
+    @Override
+    public void setMarka(Brand marka) {
+        this.marka = marka;
     }
 }

@@ -23,8 +23,9 @@ public class PatikaStore {
         addBrand("Xiaomi",8);
         addBrand("Monster",9);
 
-        /*Telefon t = new Telefon(1,3199.0,0,10,"SAMSUNG GALAXY A51",)*/
-
+        phones.add(new Telefon(1,3199.0,0,10,"SAMSUNG GALAXY A51",brands.get(0),8,5.3,128,5000,"Black"));
+        phones.add(new Telefon(2,7000.0,0,20,"iPhone 11 64 GB",brands.get(7),12,6.1,256,4500,"White"));
+        phones.add(new Telefon(3,4012,0,15,"Redmi Note 10 Pro 8GB",brands.get(2),4,5.7,64,4300,"Rose Red"));
     }
     void run(){
         Scanner in = new Scanner(System.in);
@@ -34,7 +35,9 @@ public class PatikaStore {
 
         switch(category){
             case 1:
-                // telefon
+                System.out.println("----------------------------------------------------------------------------------------------------");
+                System.out.println("| ID | Ürün Adı                      | Fiyat     | Marka     | Depolama  | Ekran     | RAM         |");
+                System.out.println("----------------------------------------------------------------------------------------------------");
                 showPhoneList();
                 break;
             case 2:
@@ -72,11 +75,11 @@ public class PatikaStore {
         phones.sort(new Comparator<Telefon>() {
             @Override
             public int compare(Telefon o1, Telefon o2) {
-                return o1.getName().compareToIgnoreCase(o2.getName());
+                return o1.getId()-o2.getId();
             }
         });
         for(Telefon p:phones){
-            System.out.println(p.getName());
+            System.out.println("|"+p.getId()+"|"+p.getName()+"|"+p.getPriceForUnit()+"|"+p.getMarka().getName()+"|"+ p.getStorage()+"|"+p.getScreenSize()+"|"+p.getRam()+"|");
         }
     }
     void showLaptopList(){
