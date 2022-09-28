@@ -2,31 +2,14 @@ package PatikaOdev.PatikaStore;
 
 import com.sun.source.tree.Tree;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class PatikaStore {
-    private TreeSet<Brand> brands = new TreeSet<>(new Comparator<Brand>() {
-        @Override
-        public int compare(Brand o1, Brand o2) {
-            return o1.getName().compareTo(o2.getName());
-        }
-    });
+    private ArrayList<Brand> brands = new ArrayList<>();
+    private ArrayList<Telefon> phones = new ArrayList<>();
+    private ArrayList<Laptop> laptops = new ArrayList<>();
 
-    private TreeSet<Telefon> phones = new TreeSet<>(new Comparator<Telefon>() {
-
-        @Override
-        public int compare(Telefon o1, Telefon o2) {
-            return o1.getName().compareTo(o2.getName());
-        }
-    });
-
-    private TreeSet<Laptop> laptops = new TreeSet<>(new Comparator<Laptop>() {
-
-        @Override
-        public int compare(Laptop o1, Laptop o2) {
-            return o1.getName().compareTo(o2.getName());
-        }
-    });
     public PatikaStore(){
 
         //Samsung, Lenovo, Apple, Huawei, Casper, Asus, HP, Xiaomi, Monster
@@ -40,7 +23,7 @@ public class PatikaStore {
         addBrand("Xiaomi",8);
         addBrand("Monster",9);
 
-        Telefon t = new Telefon(1,3199.0,0,10,"SAMSUNG GALAXY A51",)
+        /*Telefon t = new Telefon(1,3199.0,0,10,"SAMSUNG GALAXY A51",)*/
 
     }
     void run(){
@@ -73,16 +56,37 @@ public class PatikaStore {
         brands.add(new Brand(name,id));
     }
     void showBrandList(){
+        // Sıraladık.
+        brands.sort(new Comparator<Brand>() {
+            @Override
+            public int compare(Brand o1, Brand o2) {
+                return o1.getName().compareToIgnoreCase(o2.getName());
+            }
+        });
+        // foreach ile döndürdük.
         for (Brand b:brands) {
             System.out.println(b.getName());
         }
     }
     void showPhoneList(){
+        phones.sort(new Comparator<Telefon>() {
+            @Override
+            public int compare(Telefon o1, Telefon o2) {
+                return o1.getName().compareToIgnoreCase(o2.getName());
+            }
+        });
         for(Telefon p:phones){
             System.out.println(p.getName());
         }
     }
     void showLaptopList(){
+        laptops.sort(new Comparator<Laptop>() {
+            @Override
+            public int compare(Laptop o1, Laptop o2) {
+                return o1.getName().compareToIgnoreCase(o2.getName());
+            }
+        });
+
         for(Laptop l:laptops){
             System.out.println(l.getName());
         }

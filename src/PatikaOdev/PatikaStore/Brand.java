@@ -2,7 +2,7 @@ package PatikaOdev.PatikaStore;
 
 import java.util.Comparator;
 
-public class Brand{
+public class Brand {
     private java.lang.String name;
     private int id;
 
