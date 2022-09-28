@@ -1,16 +1,14 @@
 package PatikaOdev.PatikaStore;
 
-import java.util.Comparator;
-
 public class Product implements Comparable<Product> {
     private int id;
     private double priceForUnit;
     private double discountRate;
     private int stokAmount;
     private java.lang.String name;
-    private String marka;
+    private Brand marka;
 
-    public Product(int id, double priceForUnit, double discountRate, int stokAmount, java.lang.String name, String marka) {
+    public Product(int id, double priceForUnit, double discountRate, int stokAmount, java.lang.String name, Brand marka) {
         this.id = id;
         this.priceForUnit = priceForUnit;
         this.discountRate = discountRate;
@@ -59,11 +57,11 @@ public class Product implements Comparable<Product> {
         this.name = name;
     }
 
-    public String getMarka() {
+    public Brand getMarka() {
         return marka;
     }
 
-    public void setMarka(String marka) {
+    public void setMarka(Brand marka) {
         this.marka = marka;
     }
 

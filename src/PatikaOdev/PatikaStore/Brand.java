@@ -1,10 +1,12 @@
 package PatikaOdev.PatikaStore;
 
-public class String implements Comparable<String> {
+import java.util.Comparator;
+
+public class Brand{
     private java.lang.String name;
     private int id;
 
-    public String(java.lang.String name, int id) {
+    public Brand(java.lang.String name, int id) {
         this.name = name;
         this.id = id;
     }
@@ -24,9 +26,5 @@ public class String implements Comparable<String> {
     public void setId(int id) {
         this.id = id;
     }
-
-    @Override
-    public int compareTo(String o) {
-        return this.getName().compareToIgnoreCase(o.getName());
-    }
 }
+

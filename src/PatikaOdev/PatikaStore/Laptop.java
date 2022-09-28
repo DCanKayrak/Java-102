@@ -5,7 +5,7 @@ public class Laptop extends Product{
     private double screenSize;
     private int ram;
 
-    public Laptop(int id, double priceForUnit, double discountRate, int stokAmount, java.lang.String name, String marka, int ram, double screenSize, int storage) {
+    public Laptop(int id, double priceForUnit, double discountRate, int stokAmount, java.lang.String name, Brand marka, int ram, double screenSize, int storage) {
         super(id, priceForUnit, discountRate, stokAmount, name, marka);
         this.ram = ram;
         this.screenSize = screenSize;

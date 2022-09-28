@@ -8,7 +8,7 @@ public class Telefon extends Product{
     private java.lang.String color;
 
 
-    public Telefon(int id, double priceForUnit, double discountRate, int stokAmount, java.lang.String name, String marka, int ram, double screenSize, int storage, int battery, java.lang.String color) {
+    public Telefon(int id, double priceForUnit, double discountRate, int stokAmount, java.lang.String name, Brand marka, int ram, double screenSize, int storage, int battery, java.lang.String color) {
         super(id, priceForUnit, discountRate, stokAmount, name, marka);
         this.ram = ram;
         this.screenSize = screenSize;
